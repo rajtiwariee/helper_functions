@@ -31,8 +31,7 @@ def load_and_prep_image(filename, img_shape=224, scale=True):
 import gdown
 import os
 def drive_download(url,save_path = None):
-  """pass the download url and save path (optional)"""
-  download_url = str(url)
+  dataset_url = str(url)
   path = str(save_path)
   file_id = dataset_url.split("/")[-2]
   prefix = 'https://drive.google.com/uc?/export=download&id='
