@@ -27,6 +27,16 @@ def load_and_prep_image(filename, img_shape=224, scale=True):
   else:
     return img
 
+
+import gdown
+import os
+def drive_download(url,save_path = None):
+  """pass the download url and save path (optional)"""
+  download_url = str(url)
+  path = str(save_path)
+  file_id = dataset_url.split("/")[-2]
+  prefix = 'https://drive.google.com/uc?/export=download&id='
+  gdown.download(prefix+file_id)
 # Note: The following confusion matrix code is a remix of Scikit-Learn's 
 # plot_confusion_matrix function - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.plot_confusion_matrix.html
 import itertools
